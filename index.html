@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sitem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Kişisel Web Sitem</h1>
+    <nav>
+        <ul>
+            <li><a href="#anasayfa">Anasayfa</a></li>
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#projelerim">Projelerim</a></li>
+            <li><a href="#sertifikalarim">Sertifikalarım</a></li>
+        </ul>
+    </nav>
+</header>
+<!--ANASAYFA KISMI -->
+<section id="anasayfa" class="section">
+    <div class="content">
+        <h2>ANASAYFA</h2> <br>
+        
+        <div class="text-container">
+            <p id="date"></p> <!-- Dinamik tarih göstergesi -->
+        <p id="time"></p> <!-- Dinamik saat göstergesi -->
+   
+    <p id="baslik">Merhaba, Meraklı Gezgin!</p>
+    <p id="welcomeMessage">
+        Hoş geldin! Burası, projelerimin, hikayelerimin ve fikirlerimin bir araya geldiği, teknoloji ve tasarım dolu bir köşe. Göz at, keşfet ve ilham al. Kim bilir, belki buradan ayrılırken sen de bir şeyler yaratma hevesiyle dolarsın. Keyifli keşifler!
+        
+        </p>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const now = new Date();
+                const date = now.toLocaleDateString('tr-TR', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+        
+                // Tarih elemanını bul ve güncelle
+                const dateElement = document.getElementById('date');
+                if (dateElement) {
+                    dateElement.innerText = `Tarih: ${date}`;
+                } else {
+                    console.error("Tarih elemanı bulunamadı.");
+                }
+            });
+        </script>
+
+           <!-- İLETİŞİM FORMU BAŞLANGICI -->
+           <div class="form-container">
+            <h2 style="position: relative; left: 300px;">İletişim</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Adınız" name="name" required>
+                <input type="email" placeholder="E-posta" name="email" required>
+                <input type="text" placeholder="Telefon" name="phone">
+                <input type="text" placeholder="Konu" name="subject">
+                <textarea placeholder="Mesajınız" name="message" rows="4" required></textarea>
+                <button type="submit">Mesaj Gönder</button>
+            </form>
+           <!-- İLETİŞİM FORMU SONU -->
+        </div>
+    </div>
+        
+</section>
+<!--ANASAYFA KISMI BİTTİ-->
+<!--HAKKIMDA KISMI -->
+<section id="hakkimda" class="section">
+    <h2>HAKKIMDA</h2><br>
+    <img src="image/image_1.jpg" alt="Sema Sahin" class="profile-photo"><br><br>
+    <p id="bio">Merhaba! Ben Sema Şahin, Recep Tayyip Erdoğan Üniversitesi Bilgisayar Mühendisliği 4. Sınıf Öğrencisiyim. Teknolojiye ve dijital dünyaya büyük bir ilgi duydum; özellikle oyunların büyülü dünyası beni derinden etkiledi <span id="dots">...</span><span id="more" style="display: none;"> Bu tutku beni oyun geliştirme alanında ilerlemeye yöneltti ve şu anda kendimi bu alanda geliştirmek için adımlar atıyorum. Boş zamanlarımı değerlendirmek benim için çok değerli; kitap okumayı, arkadaşlarımla keyifli vakit geçirmeyi, spor yapmayı ve yeni oyun projeleri üzerinde çalışmayı çok seviyorum. Ayrıca LeetCode gibi sitelerde kodlama pratikleri yaparak algoritma ve problem çözme yeteneklerimi geliştiriyorum. Bu platformlarda geçirdiğim zaman, analitik düşünme becerilerimi pekiştirmeme ve yeni çözümler keşfetmeme yardımcı oluyor. Oyun geliştirme benim için sadece bir kariyer değil, aynı zamanda yaratıcılığımı ortaya koyabileceğim bir alan. Hayal gücümü teknik becerilerle harmanlayarak yeni dünyalar yaratmanın verdiği tatmin, bu alanda ilerlememi sağlayan en büyük motivasyonum. Bu blog sayesinde projelerimi, almış olduğum sertifikaları, öğrendiklerimi ve edindiğim deneyimleri paylaşmayı hedefliyorum. Her gün oyun geliştirme yolculuğumda yeni adımlar atıyor, öğrendiğim her bilgiyi bir sonraki projeme taşıyorum. Gelecekte daha ilham verici projelere imza atmayı ve oyun dünyasına farklı bakış açıları kazandırmayı umuyorum.</span></p><br><br>
+    <button onclick="toggleBio()" id="toggleButton">Daha Fazla Gör</button>
+</section>
+
+<!-- HAKKIMDA KISMI BİTTİ-->
+<!-- PROJELERİM KISMI-->
+<section id="projelerim" class="section">
+    <h2>PROJELERIM</h2>
+    <div id="projectList">
+   
+    
+    
+        <div class="project">
+            <div id="proje2" class="proje en-begenilen">
+                <img src="image/project_2.jpg" alt="Proje 2">
+                <p>Oyunun amacı, parçaları kaydırarak doğru sıralamayı sağlayıp tam bir resim oluşturmaktır. <br>
+                    Zihinsel gelişimi destekleyen eğlenceli bir bulmaca oyunu olup, özellikle dikkat ve hafıza gelişimi için faydalıdır. <br>
+                    Her yaştan oyuncuya hitap eder ve görsel çözümleme becerilerini güçlendirir.</p>
+            </div>
+            <div id="proje3" class="proje en-son-yapilan">
+                <img src="image/project_3.jpg" alt="Proje 3">
+                <p>Bu oyun, oyunculara stratejik bir savaş deneyimi sunarak düşmanları alt etmek için çeşitli silah ve savunma araçlarını kullanmalarını sağlar.<br>
+                    Oyuncuların reflekslerini, karar alma yeteneklerini ve stratejik düşünme becerilerini geliştirir.<br>
+                    Oyunun zorluk seviyesi ilerledikçe artar, böylece oyuncular kendilerini geliştirebilir ve daha zorlayıcı seviyelerde yeteneklerini test edebilirler.</p>
+            </div>
+        </div>
+        
+        <div class="buton-konteyneri">
+            <button onclick="showPopularProject()">En Beğenilen Projeler</button>
+            <button onclick="showRecentProject()">En Son Yapılan Projeler</button>
+        </div>
+        
+    
+</section>
+<!-- PROJELERİM KISMI BİTTİ -->
+
+
+<!-- Sertifikalar Bölümü -->
+<section id="sertifikalarim" class="section">
+    <h1>SERTİFİKALARIM</h1>
+    <div id="certificateList" class="grid-container">
+       
+        <div class="certificate">
+            <h2>Patent ve Faydalı Modellerin Korunması</h2>
+            <img src="image/image_2patent.jpg" alt="Patent ve Faydalı Modellerin Korunması">
+        </div>
+        <div class="certificate">
+            <h2>C# Programlama</h2>
+            <img src="image/image_3CSharp.jpg" alt="C# Programlama">
+        </div>
+        <div class="certificate">
+            <h2>Yapay Zeka ve Algoritmalarına Giriş</h2>
+            <img src="image/image_4Yapay_Zeka.jpg" alt="Yapay Zeka ve Algoritmalarına Giriş">
+        </div>
+        <div class="certificate">
+            <h2>Siber Güvenliğe Giriş</h2>
+            <img src="image/image_5Siber_Güvenlik.jpg" alt="Siber Güvenliğe Giriş">
+        </div>
+        <div class="certificate">
+            <h2>Temel Seviye Python Programlama Eğitimi</h2>
+            <img src="image/image_6Python.jpg" alt="Temel Seviye Python Programlama Eğitimi">
+        </div>
+        <div class="certificate">
+            <h2>Temel Seviye Linux101</h2>
+            <img src="image/image_7Linux_101.jpg" alt="Temel Seviye Linux101">
+        </div>
+        <!--Sonraki Sayfada Görünecek Sertifikalar-->
+        <div class="certificate hidden">
+            <h2>Temel Seviye Linux201</h2>
+            <img src="image/image_8Linux_201.jpg" alt="Temel Seviye Linux201">
+        </div>
+        <div class="certificate hidden">
+            <h2>Temel Seviye Linux301</h2>
+            <img src="image/image_9Linux_301.jpg" alt="Temel Seviye Linux301">
+        </div>
+        <div class="certificate hidden">
+            <h2>Temel Seviye Linux401</h2>
+            <img src="image/image_10Linux_401.jpg" alt="Temel Seviye Linux401">
+        </div>
+        <div class="certificate hidden">
+            <h2>Unity101</h2>
+            <img src="image/image_11Unity_101.jpg" alt="Unity101">
+        </div>
+        <div class="certificate hidden">
+            <h2>Unity201</h2>
+            <img src="image/image_12Unity_201.jpg" alt="Unity201">
+        </div>
+        <div class="certificate hidden">
+            <h2>Unity301</h2>
+            <img src="image/image_13Unity301.jpg" alt="Unity301">
+        </div>
+    </div>
+    <button id="showMoreBtn" onclick="toggleCertificates()">Sonraki Sayfa</button>
+</section>
+</body>
+</html>
