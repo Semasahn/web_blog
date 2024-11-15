@@ -38,7 +38,7 @@ form input, form textarea {
 
 form textarea {
     height: 100px;
-    resize: none; /* Kullanıcının boyutu değiştirmesini engeller */
+    resize: none; 
     position: relative;
     left: 300px;
 }
@@ -102,11 +102,11 @@ form button:hover {
 /* Responsive Tasarım için Ayarlar */
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* Mobilde tek sütuna geç */
+        flex-direction: column; 
         gap: 20px;
     }
     .image-container img {
-        max-width: 100%; /* Mobilde fotoğrafı tam genişlik yap */
+        max-width: 100%;
     }
 }
 
@@ -151,8 +151,8 @@ header nav a {
 
 /* Linklerin Üzerine Gelindiğinde (Hover) */
 header nav a:hover {
-    color: #b3232f; /* Hoş bir turuncu tonu */
-    text-shadow: 0px 0px 5px #ffb74d; /* Hafif bir parıltı efekti */
+    color: #b3232f; 
+    text-shadow: 0px 0px 5px #ffb74d; 
 }
 
 
@@ -162,7 +162,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Öğeler arasındaki boşluk */
+    gap: 20px; 
 }
 
 nav ul li {
@@ -231,39 +231,39 @@ nav ul li a:hover {
 }
 .project {
     display: flex;
-    justify-content: space-around; /* Projeleri yatayda ortalar ve aralarına boşluk bırakır */
-    align-items: flex-start; /* Projeleri üst hizaya getirir */
-    gap: 20px; /* Proje 1 ve Proje 2 arasındaki boşluk */
-    margin-top: 20px; /* Üstte biraz boşluk bırakır */
+    justify-content: space-around; 
+    align-items: flex-start; 
+    gap: 20px; 
+    margin-top: 20px; 
 }
 
 .proje1, .proje2 {
-    width: 45%; /* Proje 1 ve Proje 2 için genişlik */
-    padding: 10px; /* İç boşluk */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-    text-align: center; /* İçeriği ortalar */
+    width: 45%; 
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
 }
 
 .buton-konteyneri button {
-    background-color: #4CAF50; /* Buton arka plan rengi */
-    color: white; /* Buton metin rengi */
-    padding: 10px 20px; /* İç boşluk (üst-alt, sağ-sol) */
-    margin: 10px; /* Butonlar arasındaki dış boşluk */
-    border: none; /* Çerçeve kaldır */
-    border-radius: 5px; /* Köşeleri yuvarla */
-    cursor: pointer; /* Fare işaretçisi el şeklinde */
-    font-size: 16px; /* Metin boyutu */
-    transition: background-color 0.3s, transform 0.3s; /* Geçiş efektleri */
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 .buton-konteyneri button:hover {
-    background-color: #45a049; /* Üzerine gelince arka plan rengi */
-    transform: scale(1.05); /* Hafifçe büyütme efekti */
+    background-color: #45a049; 
+    transform: scale(1.05); 
 }
 
 .buton-konteyneri button:active {
-    background-color: #3e8e41; /* Tıklanınca arka plan rengi */
-    transform: scale(0.95); /* Hafifçe küçültme efekti */
+    background-color: #3e8e41; 
+    transform: scale(0.95); 
 }
 
 .buton-konteyneri button:focus {
@@ -279,7 +279,7 @@ nav ul li a:hover {
     font-size: 23px;
 }
 #sertifikalarim{
-    font-family: 'Times New Roman', Times, serif; /* Basit ve net bir yazı tipi */
+    font-family: 'Times New Roman', Times, serif; 
     font-style: italic; 
     font-size: 40px;
     color: #934509e3; 
@@ -364,32 +364,34 @@ nav ul li a:hover {
 p{
     color: #009688;
 
-        font-size: 25px; /* Yazı boyutu */
-        color: #fdfdfd; /* Yazı rengi */
-        line-height: 1.6; /* Satır aralığı */
-        margin-bottom: 10px; /* Alt boşluk */
-        font-family:'Times New Roman', Times, serif; /* Yazı tipi */
+        font-size: 25px;
+        color: #fdfdfd; 
+        line-height: 1.6; 
+        margin-bottom: 10px; 
+        font-family:'Times New Roman', Times, serif; 
     }
     #baslik {
-        font-size: 70px; /* Başlık yazı boyutu */
-        font-weight: bold; /* Kalın yazı stili */
-        color: #0aad32c1; /* Çarpıcı bir renk, isteğe göre değiştirebilirsiniz */
-        text-align: center; /* Ortaya hizalama */
-        margin-bottom: 20px; /* Alt boşluk */
-        text-shadow: 2px 2px 4px rgba(198, 147, 26, 0.4); /* Hafif bir gölge */
-        font-family: 'Times New Roman', Times, serif; /* Yazı tipi */
+        font-size: 70px; 
+        font-weight: bold; 
+        color: #0aad32c1; 
+        text-align: center; 
+        margin-bottom: 20px; 
+        text-shadow: 2px 2px 4px rgba(198, 147, 26, 0.4); 
+        font-family: 'Times New Roman', Times, serif; 
     }
     
     #welcomeMessage {
-        font-size: 20px; /* Karşılama mesajı yazı boyutu */
-        color: #FFFFFF; /* Beyaz renk, isteğe göre değiştirebilirsiniz */
-        text-align: center; /* Ortaya hizalama */
-        line-height: 1.8; /* Satır aralığı */
-        font-family: 'Arial', sans-serif; /* Yazı tipi */
-        max-width: 800px; /* Maksimum genişlik */
-        margin: 0 auto; /* Ortalamak için */
-        padding: 10px; /* İç boşluk */
-        background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
-        border-radius: 8px; /* Köşeleri yuvarla */
+        font-size: 20px; 
+        color: #FFFFFF; 
+        text-align: center; 
+        line-height: 1.8; 
+        font-family: 'Arial', sans-serif; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 10px; 
+        background-color: rgba(0, 0, 0, 0.5); 
+        border-radius: 8px; 
     }
+    
+    
     

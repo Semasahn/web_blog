@@ -41,10 +41,6 @@ function showRecentProject() {
     document.getElementById('proje3').style.display = 'block';
 }
 
-// Başlangıçta her iki projeyi de gizli yapabilirsiniz, böylece butonlara tıklanana kadar görünmezler:
-document.getElementById('proje2').style.display = 'none';
-document.getElementById('proje3').style.display = 'none';
-
 
 // sertifika button tasarımı
 
